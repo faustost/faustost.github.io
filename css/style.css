@@ -1,0 +1,161 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #111111;
+    --accent-color: #666666;
+    --border-color: #eeeeee;
+    --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    line-height: 1.6;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+header {
+    margin-bottom: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav ul li {
+    margin-bottom: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: opacity 0.2s;
+}
+
+nav a:hover {
+    opacity: 0.6;
+}
+
+.lang-toggle {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+    background: none;
+}
+
+main {
+    min-height: 60vh;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 4px;
+    filter: grayscale(100%);
+    margin-bottom: 2rem;
+    display: block;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+ul {
+    margin-bottom: 1.5rem;
+    padding-left: 1.2rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid var(--border-color);
+    margin: 3rem 0;
+}
+
+footer {
+    margin-top: 4rem;
+    font-size: 0.9rem;
+    color: var(--accent-color);
+}
+
+blockquote {
+    border-left: 3px solid var(--text-color);
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+}
+
+/* Language display logic */
+[data-lang] {
+    display: none;
+}
+
+html[lang="en"] [data-lang="en"] {
+    display: block;
+}
+
+html[lang="pt"] [data-lang="pt"] {
+    display: block;
+}
+
+/* Inline language elements */
+span[data-lang] {
+    display: none;
+}
+
+html[lang="en"] span[data-lang="en"] {
+    display: inline;
+}
+
+html[lang="pt"] span[data-lang="pt"] {
+    display: inline;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 1.5rem;
+    }
+    
+    header {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+}
