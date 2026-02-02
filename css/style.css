@@ -108,8 +108,41 @@ hr {
 
 footer {
     margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     font-size: 0.9rem;
     color: var(--accent-color);
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+.memento-mori {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-family: monospace;
+    font-size: 0.8rem;
+}
+
+.progress-bar-container {
+    width: 150px;
+    height: 3px;
+    background-color: var(--border-color);
+    margin-top: 0.3rem;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: var(--text-color);
+    width: 0%; /* Will be set by JS */
+    transition: width 1s ease-in-out;
 }
 
 blockquote {
@@ -153,6 +186,16 @@ html[lang="pt"] span[data-lang="pt"] {
     header {
         flex-direction: column;
         gap: 2rem;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+
+    .memento-mori {
+        align-items: flex-start;
     }
     
     h1 {
