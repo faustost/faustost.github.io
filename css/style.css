@@ -20,6 +20,7 @@ body {
     padding: 2rem;
     max-width: 800px;
     margin: 0 auto;
+    font-size: 0.95rem;
 }
 
 header {
@@ -44,6 +45,7 @@ nav a {
     color: var(--text-color);
     font-weight: 500;
     transition: opacity 0.2s;
+    font-size: 0.9rem;
 }
 
 nav a:hover {
@@ -53,8 +55,8 @@ nav a:hover {
 .lang-toggle {
     cursor: pointer;
     font-weight: bold;
-    font-size: 0.9rem;
-    padding: 0.5rem;
+    font-size: 0.8rem;
+    padding: 0.4rem 0.6rem;
     border: 1px solid var(--border-color);
     background: none;
 }
@@ -64,7 +66,7 @@ main {
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
     letter-spacing: -0.02em;
@@ -81,14 +83,16 @@ h1 {
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-top: 3rem;
     margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 p {
     margin-bottom: 1.5rem;
-    font-size: 1.1rem;
+    font-size: 0.95rem;
 }
 
 ul {
